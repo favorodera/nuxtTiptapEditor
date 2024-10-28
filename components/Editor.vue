@@ -10,7 +10,7 @@
         <EditorOptionsButton
           tooltip="Bold"
           :disabled-binding="!editor.can().chain().focus().toggleBold().run()"
-          :class-binding="{ 'bg-[gray-700/50]': editor.isActive('bold') }"
+          :class-binding="{ 'dark:bg-gray-700/50': editor.isActive('bold') }"
           icon="i-material-symbols-format-bold-rounded"
           @click="editor.chain().focus().toggleBold().run()"
         />
@@ -19,7 +19,7 @@
         <EditorOptionsButton
           tooltip="Italic"
           :disabled-binding="!editor.can().chain().focus().toggleItalic().run()"
-          :class-binding="{ 'bg-[gray-700/50]': editor.isActive('italic') }"
+          :class-binding="{ 'dark:bg-gray-700/50': editor.isActive('italic') }"
           icon="i-material-symbols-format-italic-rounded"
           @click="editor.chain().focus().toggleItalic().run()"
         />
@@ -28,7 +28,7 @@
         <EditorOptionsButton
           tooltip="Strikethrough"
           :disabled-binding="!editor.can().chain().focus().toggleStrike().run()"
-          :class-binding="{ 'bg-[gray-700/50]': editor.isActive('strike') }"
+          :class-binding="{ 'dark:bg-gray-700/50': editor.isActive('strike') }"
           icon="i-material-symbols-format-strikethrough-rounded"
           @click="editor.chain().focus().toggleStrike().run()"
         />
@@ -37,7 +37,7 @@
         <EditorOptionsButton
           tooltip="Code"
           :disabled-binding="!editor.can().chain().focus().toggleCode().run()"
-          :class-binding="{ 'bg-[gray-700/50]': editor.isActive('code') }"
+          :class-binding="{ 'dark:bg-gray-700/50': editor.isActive('code') }"
           icon="i-material-symbols-code"
           @click="editor.chain().focus().toggleCode().run()"
         />
@@ -57,7 +57,7 @@
         />
         <EditorOptionsButton
           tooltip="Paragraph"
-          :class-binding="{ 'bg-[gray-700/50]': editor.isActive('paragraph') }"
+          :class-binding="{ 'dark:bg-gray-700/50': editor.isActive('paragraph') }"
           icon="i-material-symbols-format-paragraph"
           @click="editor.chain().focus().setParagraph().run()"
         />
@@ -86,7 +86,7 @@
           <EditorOptionsButton
             tooltip="Heading"
             :class-binding="{
-              'bg-[gray-700/50]': editor.isActive('heading'),
+              'dark:bg-gray-700/50': editor.isActive('heading'),
             }"
             icon="i-material-symbols-h-mobiledata-rounded"
           />
@@ -94,7 +94,7 @@
             <EditorOptionsButton
               tooltip="Heading 1"
               :class-binding="{
-                'bg-[gray-700/50]': editor.isActive('heading', { level: 1 }),
+                'dark:bg-gray-700/50': editor.isActive('heading', { level: 1 }),
               }"
               icon="i-material-symbols-format-h1-rounded"
               @click="editor.chain().focus().toggleHeading({ level: 1 }).run()"
@@ -104,7 +104,7 @@
             <EditorOptionsButton
               tooltip="Heading 2"
               :class-binding="{
-                'bg-[gray-700/50]': editor.isActive('heading', { level: 2 }),
+                'dark:bg-gray-700/50': editor.isActive('heading', { level: 2 }),
               }"
               icon="i-material-symbols-format-h2-rounded"
               @click="editor.chain().focus().toggleHeading({ level: 2 }).run()"
@@ -114,7 +114,7 @@
             <EditorOptionsButton
               tooltip="Heading 3"
               :class-binding="{
-                'bg-[gray-700/50]': editor.isActive('heading', { level: 3 }),
+                'dark:bg-gray-700/50': editor.isActive('heading', { level: 3 }),
               }"
               icon="i-material-symbols-format-h3-rounded"
               @click="editor.chain().focus().toggleHeading({ level: 3 }).run()"
@@ -124,7 +124,7 @@
             <EditorOptionsButton
               tooltip="Heading 4"
               :class-binding="{
-                'bg-[gray-700/50]': editor.isActive('heading', { level: 4 }),
+                'dark:bg-gray-700/50': editor.isActive('heading', { level: 4 }),
               }"
               icon="i-material-symbols-format-h4-rounded"
               @click="editor.chain().focus().toggleHeading({ level: 4 }).run()"
@@ -134,7 +134,7 @@
             <EditorOptionsButton
               tooltip="Heading 5"
               :class-binding="{
-                'bg-[gray-700/50]': editor.isActive('heading', { level: 5 }),
+                'dark:bg-gray-700/50': editor.isActive('heading', { level: 5 }),
               }"
               icon="i-material-symbols-format-h5-rounded"
               @click="editor.chain().focus().toggleHeading({ level: 5 }).run()"
@@ -144,7 +144,7 @@
             <EditorOptionsButton
               tooltip="Heading 6"
               :class-binding="{
-                'bg-[gray-700/50]': editor.isActive('heading', { level: 6 }),
+                'dark:bg-gray-700/50': editor.isActive('heading', { level: 6 }),
               }"
               icon="i-material-symbols-format-h6-rounded"
               @click="editor.chain().focus().toggleHeading({ level: 6 }).run()"
@@ -158,7 +158,7 @@
         <EditorOptionsButton
           tooltip="Bullet List"
           icon="i-material-symbols-format-list-bulleted-rounded"
-          :class-binding="{ 'bg-[gray-700/50]': editor.isActive('bulletList') }"
+          :class-binding="{ 'dark:bg-gray-700/50': editor.isActive('bulletList') }"
           @click="editor.chain().focus().toggleBulletList().run()"
         />
 
@@ -166,7 +166,7 @@
         <EditorOptionsButton
           tooltip="Ordered List"
           icon="i-material-symbols-format-list-numbered-rounded"
-          :class-binding="{ 'bg-[gray-700/50]': editor.isActive('orderedList') }"
+          :class-binding="{ 'dark:bg-gray-700/50': editor.isActive('orderedList') }"
           @click="editor.chain().focus().toggleOrderedList().run()"
         />
 
@@ -175,7 +175,7 @@
           tooltip="Check List"
           icon="i-material-symbols-checklist-rounded"
           :class-binding="{
-            'bg-[gray-700/50]': editor.isActive('taskList'),
+            'dark:bg-gray-700/50': editor.isActive('taskList'),
           }"
           @click="editor.chain().focus().toggleTaskList().run()"
         />
@@ -186,7 +186,7 @@
         <EditorOptionsButton
           tooltip="Code Block"
           icon="i-material-symbols-code-blocks-rounded"
-          :class-binding="{ 'bg-[gray-700/50]': editor.isActive('codeBlock') }"
+          :class-binding="{ 'dark:bg-gray-700/50': editor.isActive('codeBlock') }"
           @click="editor.chain().focus().toggleCodeBlock().run()"
         />
 
@@ -194,7 +194,7 @@
         <EditorOptionsButton
           tooltip="Blockquote"
           icon="i-material-symbols-format-quote-rounded"
-          :class-binding="{ 'bg-[gray-700/50]': editor.isActive('blockquote') }"
+          :class-binding="{ 'dark:bg-gray-700/50': editor.isActive('blockquote') }"
           @click="editor.chain().focus().toggleBlockquote().run()"
         />
 
@@ -216,7 +216,7 @@
         <EditorOptionsButton
           tooltip="Highlight"
           :class-binding="{
-            'bg-[gray-700/50]': editor.isActive('highlight'),
+            'dark:bg-gray-700/50': editor.isActive('highlight'),
           }"
           icon="i-material-symbols-highlighter-size-5"
           @click="editor.chain().focus().toggleHighlight().run()"
@@ -226,7 +226,7 @@
         <EditorOptionsButton
           tooltip="Subscript"
           :class-binding="{
-            'bg-[gray-700/50]': editor.isActive('subscript'),
+            'dark:bg-gray-700/50': editor.isActive('subscript'),
           }"
           icon="i-material-symbols-subscript-rounded"
           @click="editor.chain().focus().toggleSubscript().run()"
@@ -236,7 +236,7 @@
         <EditorOptionsButton
           tooltip="Superscript"
           :class-binding="{
-            'bg-[gray-700/50]': editor.isActive('superscript'),
+            'dark:bg-gray-700/50': editor.isActive('superscript'),
           }"
           icon="i-material-symbols-superscript-rounded"
           @click="editor.chain().focus().toggleSuperscript().run()"
@@ -246,7 +246,7 @@
         <EditorOptionsButton
           tooltip="Underline"
           :class-binding="{
-            'bg-[gray-700/50]': editor.isActive('underline'),
+            'dark:bg-gray-700/50': editor.isActive('underline'),
           }"
           icon="i-material-symbols-format-underlined-rounded"
           @click="editor.chain().focus().toggleUnderline().run()"
@@ -277,7 +277,7 @@
           tooltip="Text Align Left"
           icon="i-material-symbols-format-align-left-rounded"
           :class-binding="{
-            'bg-[gray-700/50]': editor.isActive({ textAlign: 'left' }),
+            'dark:bg-gray-700/50': editor.isActive({ textAlign: 'left' }),
           }"
           @click="editor.chain().focus().setTextAlign('left').run()"
         />
@@ -287,7 +287,7 @@
           tooltip="Text Align Center"
           icon="i-material-symbols-format-align-center-rounded"
           :class-binding="{
-            'bg-[gray-700/50]': editor.isActive({ textAlign: 'center' }),
+            'dark:bg-gray-700/50': editor.isActive({ textAlign: 'center' }),
           }"
           @click="editor.chain().focus().setTextAlign('center').run()"
         />
@@ -297,7 +297,7 @@
           tooltip="Text Align Right"
           icon="i-material-symbols-format-align-right-rounded"
           :class-binding="{
-            'bg-[gray-700/50]': editor.isActive({ textAlign: 'right' }),
+            'dark:bg-gray-700/50': editor.isActive({ textAlign: 'right' }),
           }"
           @click="editor.chain().focus().setTextAlign('right').run()"
         />
@@ -323,7 +323,7 @@
           tooltip="Link"
           icon="i-material-symbols-attachment-rounded"
           :class-binding="{
-            'bg-[gray-700/50]': editor.isActive('link'),
+            'dark:bg-gray-700/50': editor.isActive('link'),
           }"
           @click="linkFormIsOpen = true"
         />
@@ -362,7 +362,7 @@
           <EditorOptionsButton
             tooltip="Table"
             icon="i-material-symbols-table-chart"
-            :class-binding="{ 'bg-[gray-700/50]': editor.isActive('table') }"
+            :class-binding="{ 'dark:bg-gray-700/50': editor.isActive('table') }"
           />
           <template #insert-table>
             <EditorOptionsButton
@@ -569,7 +569,7 @@
               variant="ghost"
               :ui="{
                 base: 'justify-self-center w-max dark:ring-0 self-end property-all duration-500 ',
-                color: { gray: { ghost: 'dark:bg-[gray-700/50]' } },
+                color: { gray: { ghost: 'dark:dark:bg-gray-700/50' } },
               }"
             />
           </UForm>
@@ -674,7 +674,7 @@
               variant="ghost"
               :ui="{
                 base: 'justify-self-center w-max dark:ring-0 self-end property-all duration-500 ',
-                color: { gray: { ghost: 'dark:bg-[gray-700/50]' } },
+                color: { gray: { ghost: 'dark:dark:bg-gray-700/50' } },
               }"
             />
           </UForm>
@@ -735,7 +735,7 @@
               variant="ghost"
               :ui="{
                 base: 'justify-self-center w-max dark:ring-0 self-end property-all duration-500 ',
-                color: { gray: { ghost: 'dark:bg-[gray-700/50]' } },
+                color: { gray: { ghost: 'dark:dark:bg-gray-700/50' } },
               }"
             />
           </UForm>
