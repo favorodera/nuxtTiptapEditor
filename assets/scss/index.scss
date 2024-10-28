@@ -1,0 +1,37 @@
+* {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: #f3f4f6;
+
+    &:hover {
+      background-color: #d1d5db;
+      cursor: grab;
+    }
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+}
+
+body {
+  background-color: black;
+  min-height: 100vh;
+}
+
+#app {
+  margin: 0 auto;
+  width: clamp(20rem, 100%, 50rem);
+  padding: 1rem;
+}
